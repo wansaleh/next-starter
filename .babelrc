@@ -1,0 +1,13 @@
+{
+  "presets": ["next/babel", "@emotion/babel-preset-css-prop"],
+  "plugins": [
+    [
+      "@babel/plugin-proposal-decorators",
+      {
+        "legacy": true
+      }
+    ],
+    "tailwind-components",
+    "inline-react-svg"
+  ]
+}

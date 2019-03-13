@@ -3,7 +3,9 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "now": "now && now alias",
+    "now-build": "next build && next export -o dist"
   },
   "dependencies": {
     "@emotion/babel-preset-css-prop": "^10.0.9",

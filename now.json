@@ -1,0 +1,6 @@
+{
+  "version": 2,
+  "name": "your-app-name",
+  "alias": "your-app-name.com",
+  "builds": [{ "src": "package.json", "use": "@now/static-build" }]
+}

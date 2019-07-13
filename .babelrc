@@ -7,7 +7,6 @@
         "legacy": true
       }
     ],
-    "tailwind-components",
     "inline-react-svg"
   ]
 }

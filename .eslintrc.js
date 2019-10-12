@@ -46,6 +46,7 @@ module.exports = {
     'no-underscore-dangle': 'off',
     'no-use-before-define': 'off',
     'no-useless-concat': 'off',
+    'object-curly-newline': 'off',
     'operator-linebreak': 'off',
     'prefer-destructuring': 'off',
     'react/destructuring-assignment': 'off',

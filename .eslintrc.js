@@ -4,7 +4,7 @@ module.exports = {
     browser: true,
     node: true
   },
-  extends: ['airbnb'],
+  extends: ['airbnb', 'prettier', 'prettier/react'],
   parser: 'babel-eslint',
   parserOptions: {
     ecmaFeatures: {
@@ -13,7 +13,8 @@ module.exports = {
   },
   globals: {
     graphql: false,
-    tw: true
+    // tw: true,
+    cloudinary: true
   },
   settings: {
     react: {
@@ -21,48 +22,53 @@ module.exports = {
     }
   },
   rules: {
-    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'array-callback-return': 'off',
-    'arrow-parens': 'off',
-    camelcase: 'off',
-    'class-methods-use-this': 'off',
-    'comma-dangle': 'off',
-    'global-require': 'off',
-    'implicit-arrow-linebreak': 'off',
-    'import/no-dynamic-require': 'off',
-    'import/no-extraneous-dependencies': 'off',
-    'import/prefer-default-export': 'off',
-    // 'indent': 'off',
-    'jsx-a11y/click-events-have-key-events': 'off',
-    'jsx-a11y/href-no-hash': 'off',
-    'jsx-a11y/label-has-for': 'off',
-    'jsx-a11y/no-noninteractive-element-interactions': 'off',
-    'jsx-a11y/no-static-element-interactions': 'off',
-    'lines-between-class-members': 'off',
-    'no-console': 'off',
-    'no-empty': 'off',
-    'no-param-reassign': 'off',
-    'no-underscore-dangle': 'off',
-    'no-use-before-define': 'off',
-    'no-useless-concat': 'off',
-    'object-curly-newline': 'off',
-    'operator-linebreak': 'off',
-    'prefer-destructuring': 'off',
-    'react/destructuring-assignment': 'off',
-    'react/forbid-prop-types': 'off',
-    'react/jsx-filename-extension': 'off',
-    'react/jsx-no-bind': 'off',
-    'react/jsx-one-expression-per-line': 'off',
-    'react/no-multi-comp': 'off',
-    'react/no-danger': 'off',
-    'react/prefer-stateless-function': 'off',
-    'react/prop-types': 'off',
-    'react/require-default-props': 'off',
-    'react/sort-comp': 'off',
-    'template-curly-spacing': 'off',
+    'no-console': process.env.NODE_ENV === 'production' ? 2 : 0,
+    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
+    'array-callback-return': 0,
+    'arrow-parens': 1,
+    camelcase: 0,
+    'class-methods-use-this': 0,
+    'comma-dangle': 0,
+    'global-require': 0,
+    'implicit-arrow-linebreak': 0,
+    'import/no-dynamic-require': 0,
+    'import/no-extraneous-dependencies': 0,
+    'import/prefer-default-export': 0,
+    // 'indent': 0,
+    'jsx-a11y/click-events-have-key-events': 0,
+    'jsx-a11y/href-no-hash': 0,
+    'jsx-a11y/label-has-for': 0,
+    'jsx-a11y/no-noninteractive-element-interactions': 0,
+    'jsx-a11y/no-static-element-interactions': 0,
+    'lines-between-class-members': 0,
+    'no-console': 0,
+    'no-empty': 0,
+    'no-param-reassign': 0,
+    'no-underscore-dangle': 0,
+    'no-use-before-define': 0,
+    'no-useless-concat': 0,
+    'operator-linebreak': 0,
+    'prefer-destructuring': 0,
+    'react/destructuring-assignment': 0,
+    'react/forbid-prop-types': 0,
+    'react/jsx-filename-extension': 0,
+    'react/jsx-no-bind': 0,
+    'react/jsx-one-expression-per-line': 0,
+    'react/jsx-props-no-spreading': 0,
+    // 'react/jsx-wrap-multilines': [
+    //   2,
+    //   { declaration: false, assignment: false }
+    // ],
+    'react/no-multi-comp': 0,
+    'react/no-danger': 0,
+    'react/no-array-index-key': 0,
+    'react/prefer-stateless-function': 0,
+    'react/prop-types': 0,
+    'react/require-default-props': 0,
+    'react/sort-comp': 0,
+    'template-curly-spacing': 0,
     'jsx-a11y/anchor-is-valid': [
-      'error',
+      2,
       {
         components: ['Link'],
         specialLink: ['to'],
@@ -70,10 +76,11 @@ module.exports = {
       }
     ],
     'no-unused-expressions': [
-      'warn',
+      1,
       {
         allowTaggedTemplates: true
       }
-    ]
+    ],
+    'no-unused-expressions': 1
   }
 };

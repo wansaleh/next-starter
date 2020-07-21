@@ -1,12 +1,4 @@
 {
   "presets": ["next/babel", "@emotion/babel-preset-css-prop"],
-  "plugins": [
-    [
-      "@babel/plugin-proposal-decorators",
-      {
-        "legacy": true
-      }
-    ],
-    "inline-react-svg"
-  ]
+  "plugins": ["macros", "inline-react-svg"]
 }

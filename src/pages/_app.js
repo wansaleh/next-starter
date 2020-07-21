@@ -4,7 +4,7 @@ import { ThemeProvider, CSSReset } from '@chakra-ui/core';
 
 import chakra from '../styles/chakra';
 import '../styles/main.css';
-import '../styles/font-sf2.css';
+import '../styles/font-graphik.css';
 
 class MyApp extends App {
   render() {

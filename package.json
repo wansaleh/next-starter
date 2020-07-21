@@ -3,9 +3,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start",
-    "now": "now && now alias",
-    "now-build": "next build && next export -o dist"
+    "start": "next start"
   },
   "dependencies": {
     "@chakra-ui/core": "^0.8.0",
@@ -27,8 +25,6 @@
     "tailwindcss": "^1.4.6"
   },
   "devDependencies": {
-    "@babel/plugin-proposal-decorators": "^7.10.4",
-    "@babel/plugin-transform-flow-strip-types": "^7.10.4",
     "babel-eslint": "^10.1.0",
     "babel-plugin-import": "^1.13.0",
     "babel-plugin-macros": "^2.8.0",

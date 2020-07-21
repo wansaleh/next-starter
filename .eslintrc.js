@@ -13,8 +13,7 @@ module.exports = {
   },
   globals: {
     graphql: false,
-    // tw: true,
-    cloudinary: true
+    tw: true
   },
   settings: {
     react: {
@@ -41,7 +40,6 @@ module.exports = {
     'jsx-a11y/no-noninteractive-element-interactions': 0,
     'jsx-a11y/no-static-element-interactions': 0,
     'lines-between-class-members': 0,
-    'no-console': 0,
     'no-empty': 0,
     'no-param-reassign': 0,
     'no-underscore-dangle': 0,
@@ -64,6 +62,7 @@ module.exports = {
     'react/no-array-index-key': 0,
     'react/prefer-stateless-function': 0,
     'react/prop-types': 0,
+    'react/react-in-jsx-scope': 0,
     'react/require-default-props': 0,
     'react/sort-comp': 0,
     'template-curly-spacing': 0,
@@ -80,7 +79,6 @@ module.exports = {
       {
         allowTaggedTemplates: true
       }
-    ],
-    'no-unused-expressions': 1
+    ]
   }
 };

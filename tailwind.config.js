@@ -4,7 +4,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['SF Text', 'SF Display', ...defaultTheme.fontFamily.sans]
+        sans: ['Graphik', ...defaultTheme.fontFamily.sans],
+        head: ['Graphik', ...defaultTheme.fontFamily.sans],
+        serif: ['Merriweather', ...defaultTheme.fontFamily.sans]
       }
     }
   },

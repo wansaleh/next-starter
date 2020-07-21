@@ -1,5 +1,4 @@
-import React from 'react';
-import { Box, Heading, Text, Flex } from '@chakra-ui/core';
+import { Heading, Text, Flex } from '@chakra-ui/core';
 
 import Head from '../components/head';
 import Nav from '../components/nav';

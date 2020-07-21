@@ -2,11 +2,11 @@ import { theme } from '@chakra-ui/core';
 import resolveConfig from 'tailwindcss/resolveConfig';
 import tailwindConfig from '../../tailwind.config';
 
-const tw = resolveConfig(tailwindConfig);
+const tailwind = resolveConfig(tailwindConfig).theme;
 
 export default {
   containerProps: {
-    maxW: '5xl',
+    maxW: '4xl',
     w: '100vw',
     mx: 'auto',
     px: 4
@@ -15,16 +15,18 @@ export default {
   ...theme,
   colors: {
     ...theme.colors,
-    brand: tw.theme.colors.brand
+    brand: tailwind.colors.brand
   },
   fonts: {
     ...theme.fonts,
-    body: `'SF Text', 'SF Display', ${theme.fonts.body}`,
-    heading: `'SF Display', ${theme.fonts.heading}`,
-    serif: `Merriweather, serif, ${theme.fonts.body}`
+    body: tailwind.fontFamily.sans.join(','),
+    heading: tailwind.fontFamily.head.join(','),
+    serif: tailwind.fontFamily.serif.join(',')
   },
   fontSizes: {
     ...theme.fontSizes,
-    '2xs': '11px'
+    '2xs': '11px',
+    '7xl': '5rem',
+    '8xl': '7rem'
   }
 };

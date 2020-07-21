@@ -1,10 +1,10 @@
-import React from 'react';
 import Link from 'next/link';
 import styled from '@emotion/styled';
+import tw from 'tailwind.macro';
 
 const links = [
   { href: 'https://github.com/zeit/next.js', label: 'Github' }
-].map(link => {
+].map((link) => {
   link.key = `nav-link-${link.href}-${link.label}`;
   return link;
 });
@@ -48,15 +48,13 @@ const Wrapper = styled.nav`
     justify-content: space-between;
   }
   nav > ul {
-    padding: 4px 16px;
+    padding: 10px;
   }
   li {
     display: flex;
-    padding: 6px 8px;
+    padding: 10px;
   }
   a {
-    color: #067df7;
-    text-decoration: none;
-    font-size: 13px;
+    ${tw`text-sm no-underline text-blue-400 hover:text-black`}
   }
 `;

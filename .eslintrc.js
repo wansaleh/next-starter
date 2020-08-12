@@ -4,7 +4,7 @@ module.exports = {
     browser: true,
     node: true
   },
-  extends: ['airbnb', 'prettier', 'prettier/react'],
+  extends: ['airbnb', 'plugin:mdx/recommended', 'prettier', 'prettier/react'],
   parser: 'babel-eslint',
   parserOptions: {
     ecmaFeatures: {
@@ -13,7 +13,8 @@ module.exports = {
   },
   globals: {
     graphql: false,
-    tw: true
+    tw: true,
+    Glider: true
   },
   settings: {
     react: {

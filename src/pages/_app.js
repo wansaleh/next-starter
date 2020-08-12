@@ -1,22 +1,26 @@
-import React from 'react';
-import App from 'next/app';
-import { ThemeProvider, CSSReset } from '@chakra-ui/core';
+import { ChakraProvider, cookieStorageManager } from '@chakra-ui/core';
 
 import chakra from '../styles/chakra';
 import '../styles/main.css';
 import '../styles/font-graphik.css';
+import '../styles/font-nanum.css';
 
-class MyApp extends App {
-  render() {
-    const { Component, pageProps } = this.props;
+const App = ({ Component, pageProps, cookies = '' }) => {
+  return (
+    <ChakraProvider
+      resetCSS
+      theme={chakra}
+      storageManager={cookieStorageManager(cookies)}
+    >
+      <Component {...pageProps} />
+    </ChakraProvider>
+  );
+};
 
-    return (
-      <ThemeProvider theme={chakra}>
-        <CSSReset />
-        <Component {...pageProps} />
-      </ThemeProvider>
-    );
-  }
-}
+App.getInitialProps = async ({ ctx }) => {
+  return {
+    cookies: ctx.req?.headers?.cookie
+  };
+};
 
-export default MyApp;
+export default App;

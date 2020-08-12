@@ -1,13 +1,11 @@
-const compose = require('lodash/fp/compose');
-const withCSS = require('@zeit/next-css');
-const withSASS = require('@zeit/next-sass');
-const withImages = require('next-images');
+const withPlugins = require('next-compose-plugins');
+// const withCSS = require('@zeit/next-css');
+// const withSASS = require('@zeit/next-sass');
 const withFonts = require('next-fonts');
+const withImages = require('next-optimized-images');
 
-module.exports = compose([withCSS, withSASS, withImages, withFonts])({
-  // target: 'serverless',
-  cssModules: true,
-  webpack: config => {
+module.exports = withPlugins([[withImages], [withFonts]], {
+  webpack: (config) => {
     // Fixes npm packages that depend on `fs` module
     config.node = {
       fs: 'empty'

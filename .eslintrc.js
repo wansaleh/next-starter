@@ -4,7 +4,7 @@ module.exports = {
     browser: true,
     node: true
   },
-  extends: ['airbnb', 'plugin:mdx/recommended', 'prettier', 'prettier/react'],
+  extends: ['airbnb', 'prettier', 'prettier/react'],
   parser: 'babel-eslint',
   parserOptions: {
     ecmaFeatures: {

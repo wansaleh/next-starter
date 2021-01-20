@@ -1,14 +1,13 @@
-import { ChakraProvider } from '@chakra-ui/core';
+import { ChakraProvider } from '@chakra-ui/react';
 
 import chakra from '../styles/chakra';
 import '../styles/main.css';
+import '../styles/font-graphik.css';
 
-const App = ({ Component, pageProps }) => {
+export default function App({ Component, pageProps }) {
   return (
     <ChakraProvider resetCSS theme={chakra}>
       <Component {...pageProps} />
     </ChakraProvider>
   );
-};
-
-export default App;
+}

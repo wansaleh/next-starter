@@ -21,8 +21,8 @@ module.exports = {
         ...brandAlt
       },
       fontFamily: {
-        sans: ['Inter', ...defaultTheme.fontFamily.sans],
-        head: ['Inter', ...defaultTheme.fontFamily.sans],
+        sans: ['Graphik', ...defaultTheme.fontFamily.sans],
+        head: ['Graphik', ...defaultTheme.fontFamily.sans],
         serif: ['Merriweather', ...defaultTheme.fontFamily.sans],
         mono: ['Nanum Gothic Coding', 'monospace']
       }

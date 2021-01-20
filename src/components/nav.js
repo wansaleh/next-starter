@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import styled from '@emotion/styled';
-import tw from 'tailwind.macro';
+import tw from 'twin.macro';
 
 const links = [
   { href: 'https://github.com/zeit/next.js', label: 'Github' }
@@ -55,6 +55,6 @@ const Wrapper = styled.nav`
     padding: 10px;
   }
   a {
-    ${tw`text-sm no-underline text-blue-400 hover:text-black`}
+    ${tw`text-sm text-blue-400 no-underline hover:text-black`}
   }
 `;

@@ -1,3 +1,7 @@
 # next-starter
 
-My go-to starter. Clone this thing. Run `npm i`. That's it.
+My go-to starter. With Next.js, Chakra-UI, Tailwind.
+
+## Installation & Usage
+
+Clone this repo. Run `npm i`. That's it. Or just press "Use this template" above.

@@ -1,41 +1,43 @@
 import { extendTheme } from '@chakra-ui/react';
-
 import resolveConfig from 'tailwindcss/resolveConfig';
+
 import tailwindConfig from '../../tailwind.config';
 
 const tailwind = resolveConfig(tailwindConfig).theme;
 
-export default extendTheme({
+function convertFonts(fonts) {
+  const out = {};
+  Object.keys(fonts).map((family) => {
+    out[family] = fonts[family].join(',');
+  });
+  out.body = tailwind.fontFamily.sans.join(',');
+  out.heading = tailwind.fontFamily.head.join(',');
+  return out;
+}
+
+const theme = extendTheme({
   styles: {
     global: (props) => ({
       body: {
-        backgroundColor: props.colorMode !== 'dark' ? 'white' : 'black',
-        fontFamily: 'body',
-        color: props.colorMode === 'dark' ? 'white' : 'gray.900'
-      },
-
-      a: {
-        color: props.colorMode === 'dark' ? 'brand.300' : 'brand.500'
+        fontFamily: 'body'
+        // backgroundColor: props.colorMode !== 'dark' ? 'white' : 'black',
+        // color: props.colorMode === 'dark' ? 'white' : 'black'
       }
     })
   },
 
   colors: {
-    brand: tailwind.colors.brand,
-    brandAlt: tailwind.colors.brandAlt,
-    gray: tailwind.colors.gray
+    ...tailwind.colors
   },
 
   fonts: {
-    body: tailwind.fontFamily.sans.join(','),
-    heading: tailwind.fontFamily.head.join(','),
-    serif: tailwind.fontFamily.serif.join(','),
-    mono: tailwind.fontFamily.mono.join(',')
+    ...convertFonts(tailwind.fontFamily)
   },
 
-  fontSizes: {
-    '2xs': '11px',
-    '7xl': '5rem',
-    '8xl': '7rem'
-  }
+  fontSizes: Object.entries(tailwind.fontSize).reduce((out, [key, val]) => {
+    out[key] = val[0];
+    return out;
+  }, {})
 });
+
+export default theme;

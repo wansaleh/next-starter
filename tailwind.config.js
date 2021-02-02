@@ -1,13 +1,14 @@
 const tailwindColorPalette = require('@ky-is/tailwind-color-palette');
 const defaultTheme = require('tailwindcss/defaultTheme');
+const colors = require('tailwindcss/colors');
 
-const brand = tailwindColorPalette('#007AD3', {
-  name: 'brand',
+const primary = tailwindColorPalette(colors.teal[500], {
+  name: 'primary',
   greyscale: false,
   ui: false
 });
-const brandAlt = tailwindColorPalette('#ed1c2b', {
-  name: 'brandAlt',
+const secondary = tailwindColorPalette(colors.red[500], {
+  name: 'secondary',
   greyscale: false,
   ui: false
 });
@@ -17,17 +18,20 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        ...brand,
-        ...brandAlt
+        ...primary,
+        ...secondary,
+        gray: colors.trueGray
       },
       fontFamily: {
-        sans: ['Graphik', ...defaultTheme.fontFamily.sans],
-        head: ['Graphik', ...defaultTheme.fontFamily.sans],
-        serif: ['Merriweather', ...defaultTheme.fontFamily.sans],
-        mono: ['Nanum Gothic Coding', 'monospace']
+        sans: ['Inter', ...defaultTheme.fontFamily.sans],
+        head: ['Inter', ...defaultTheme.fontFamily.sans],
+        mono: ['Nanum Gothic Coding', ...defaultTheme.fontFamily.mono]
       }
     }
   },
   variants: {},
-  plugins: []
+  plugins: [],
+  corePlugins: {
+    container: false
+  }
 };

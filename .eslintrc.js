@@ -1,25 +1,12 @@
 module.exports = {
-  root: true,
-  env: {
-    browser: true,
-    node: true
-  },
   extends: ['airbnb', 'prettier', 'prettier/react'],
-  parser: 'babel-eslint',
-  parserOptions: {
-    ecmaFeatures: {
-      legacyDecorators: true
-    }
-  },
+  parserOptions: { ecmaVersion: 2020 },
+  plugins: ['simple-import-sort'],
   globals: {
     graphql: false,
     tw: true,
-    Glider: true
-  },
-  settings: {
-    react: {
-      version: 'detect'
-    }
+    document: true,
+    window: true
   },
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 2 : 0,
@@ -34,7 +21,6 @@ module.exports = {
     'import/no-dynamic-require': 0,
     'import/no-extraneous-dependencies': 0,
     'import/prefer-default-export': 0,
-    // 'indent': 0,
     'jsx-a11y/click-events-have-key-events': 0,
     'jsx-a11y/href-no-hash': 0,
     'jsx-a11y/label-has-for': 0,
@@ -54,10 +40,6 @@ module.exports = {
     'react/jsx-no-bind': 0,
     'react/jsx-one-expression-per-line': 0,
     'react/jsx-props-no-spreading': 0,
-    // 'react/jsx-wrap-multilines': [
-    //   2,
-    //   { declaration: false, assignment: false }
-    // ],
     'react/no-multi-comp': 0,
     'react/no-danger': 0,
     'react/no-array-index-key': 0,
@@ -80,6 +62,8 @@ module.exports = {
       {
         allowTaggedTemplates: true
       }
-    ]
+    ],
+    'simple-import-sort/imports': 'error',
+    'simple-import-sort/exports': 'error'
   }
 };

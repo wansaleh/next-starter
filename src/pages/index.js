@@ -1,5 +1,5 @@
+import { Box, Flex, Heading, Text } from '@chakra-ui/react';
 import React from 'react';
-import { Heading, Text, Flex } from '@chakra-ui/react';
 
 import Head from '../components/head';
 import Nav from '../components/nav';
@@ -15,11 +15,29 @@ export default function Home() {
         flexDirection="column"
         justifyContent="center"
         alignItems="center"
-        minH="20rem"
+        textAlign="center"
+        minH="100vh"
+        className="container"
       >
-        <Heading>Welcome to Next!</Heading>
-        <Text>
-          To get started, edit <code>pages/index.js</code> and save to reload.
+        <Heading
+          fontSize="7xl"
+          fontWeight="600"
+          letterSpacing="tighter"
+          lineHeight="1"
+          mb="4"
+        >
+          Welcome to{' '}
+          <Box as="span" fontWeight="900">
+            Next.
+          </Box>
+        </Heading>
+
+        <Text color="gray.700" fontWeight="400" fontSize="xl">
+          To get started, edit{' '}
+          <Box as="code" fontWeight="600">
+            pages/index.js
+          </Box>{' '}
+          and save to reload.
         </Text>
       </Flex>
     </>

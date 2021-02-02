@@ -21,18 +21,18 @@ export default function Home() {
       >
         <Heading
           fontSize="7xl"
-          fontWeight="600"
+          fontWeight="500"
           letterSpacing="tighter"
           lineHeight="1"
           mb="4"
         >
           Welcome to{' '}
-          <Box as="span" fontWeight="900">
+          <Box as="span" fontWeight="800">
             Next.
           </Box>
         </Heading>
 
-        <Text color="gray.700" fontWeight="400" fontSize="xl">
+        <Text color="gray.500" fontWeight="400" fontSize="xl">
           To get started, edit{' '}
           <Box as="code" fontWeight="600">
             pages/index.js

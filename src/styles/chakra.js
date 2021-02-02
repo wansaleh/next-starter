@@ -25,12 +25,14 @@ export default extendTheme({
     brandAlt: tailwind.colors.brandAlt,
     gray: tailwind.colors.gray
   },
+
   fonts: {
     body: tailwind.fontFamily.sans.join(','),
     heading: tailwind.fontFamily.head.join(','),
     serif: tailwind.fontFamily.serif.join(','),
     mono: tailwind.fontFamily.mono.join(',')
   },
+
   fontSizes: {
     '2xs': '11px',
     '7xl': '5rem',

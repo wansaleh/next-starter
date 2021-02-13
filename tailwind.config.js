@@ -1,13 +1,13 @@
-const tailwindColorPalette = require('@ky-is/tailwind-color-palette');
+const palette = require('@ky-is/tailwind-color-palette');
 const defaultTheme = require('tailwindcss/defaultTheme');
 const colors = require('tailwindcss/colors');
 
-const primary = tailwindColorPalette(colors.teal[500], {
+const primary = palette(colors.teal[500], {
   name: 'primary',
   greyscale: false,
   ui: false
 });
-const secondary = tailwindColorPalette(colors.red[500], {
+const secondary = palette(colors.red[500], {
   name: 'secondary',
   greyscale: false,
   ui: false

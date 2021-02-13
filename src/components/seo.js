@@ -1,59 +1,75 @@
-import Head from 'next/head';
-import React from 'react';
+import NextHead from 'next/head';
 
 export default function SEO({
+  title = 'change title',
   description = 'change descriptions',
   author = 'Wan Saleh @wansaleh',
-  meta,
-  title = 'change title'
+  url = 'https://www.com',
+  ogImage = '',
+  children
 }) {
   const metaData = [
     {
-      name: `description`,
+      name: 'description',
       content: description
     },
     {
-      property: `og:title`,
+      property: 'og:url',
+      content: url
+    },
+    {
+      property: 'og:title',
       content: title
     },
     {
-      property: `og:description`,
+      property: 'og:description',
       content: description
     },
     {
-      property: `og:type`,
-      content: `website`
+      property: 'og:type',
+      content: 'website'
     },
     {
-      name: `twitter:card`,
-      content: `summary`
+      property: 'og:image',
+      content: ogImage
     },
     {
-      name: `twitter:creator`,
+      property: 'og:image:width',
+      content: '1200'
+    },
+    {
+      property: 'og:image:height',
+      content: '630'
+    },
+    {
+      name: 'twitter:site',
+      content: url
+    },
+    {
+      name: 'twitter:card',
+      content: 'summary'
+    },
+    {
+      name: 'twitter:creator',
       content: author
     },
     {
-      name: `twitter:title`,
+      name: 'twitter:title',
       content: title
     },
     {
-      name: `twitter:description`,
+      name: 'twitter:description',
       content: description
     }
-  ].concat(meta);
+  ];
 
   return (
-    <Head>
+    <NextHead>
       <title>{title}</title>
       {metaData.map(({ name, content }, i) => (
         <meta key={i} name={name} content={content} />
       ))}
-    </Head>
+      {children}
+    </NextHead>
   );
 }
-
-SEO.defaultProps = {
-  lang: `en`,
-  meta: [],
-  description: ``
-};

@@ -22,15 +22,16 @@ export default function Nav() {
       </li>
       <Flex as="ul">
         <Box as="li" ml="3">
-          <button
-            type="button"
+          <Button
+            variant="link"
+            size="sm"
             onClick={(e) => {
               e.preventDefault();
               toggleColorMode();
             }}
           >
             {colorMode === 'light' ? 'Dark' : 'Light'}
-          </button>
+          </Button>
         </Box>
       </Flex>
     </Flex>

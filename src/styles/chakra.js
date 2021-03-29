@@ -15,7 +15,7 @@ function convertFonts(fonts) {
   return out;
 }
 
-const theme = extendTheme({
+export default extendTheme({
   styles: {
     global: (props) => ({
       body: {
@@ -24,20 +24,18 @@ const theme = extendTheme({
         // color: props.colorMode === 'dark' ? 'white' : 'black'
       }
     })
-  },
+  }
 
-  colors: {
-    ...tailwind.colors
-  },
+  // colors: {
+  //   ...tailwind.colors
+  // },
 
-  fonts: {
-    ...convertFonts(tailwind.fontFamily)
-  },
+  // fonts: {
+  //   ...convertFonts(tailwind.fontFamily)
+  // },
 
-  fontSizes: Object.entries(tailwind.fontSize).reduce((out, [key, val]) => {
-    out[key] = val[0];
-    return out;
-  }, {})
+  // fontSizes: Object.entries(tailwind.fontSize).reduce((out, [key, val]) => {
+  //   out[key] = val[0];
+  //   return out;
+  // }, {})
 });
-
-export default theme;

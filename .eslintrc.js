@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['airbnb', 'prettier', 'prettier/react'],
+  extends: ['airbnb', 'prettier'],
   parserOptions: { ecmaVersion: 2020 },
   plugins: ['simple-import-sort'],
   globals: {

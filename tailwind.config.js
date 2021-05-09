@@ -2,12 +2,12 @@ const palette = require('@ky-is/tailwind-color-palette');
 const defaultTheme = require('tailwindcss/defaultTheme');
 const colors = require('tailwindcss/colors');
 
-const primary = palette(colors.teal[500], {
-  name: 'primary',
+const brand = palette(colors.teal[500], {
+  name: 'brand',
   greyscale: false,
   ui: false
 });
-const secondary = palette(colors.red[500], {
+const brandAlt = palette(colors.red[500], {
   name: 'secondary',
   greyscale: false,
   ui: false
@@ -18,9 +18,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        ...primary,
-        ...secondary,
-        gray: colors.trueGray
+        ...brand,
+        ...brandAlt
+        // gray: colors.trueGray
       },
       fontFamily: {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],

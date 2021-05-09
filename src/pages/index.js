@@ -19,13 +19,7 @@ export default function Home() {
         minH="100vh"
         className="container"
       >
-        <Heading
-          fontSize="7xl"
-          fontWeight="500"
-          letterSpacing="tighter"
-          lineHeight="1"
-          mb="4"
-        >
+        <Heading fontSize="7xl" fontWeight="500" letterSpacing="tighter" lineHeight="1" mb="4">
           Welcome to{' '}
           <Box as="span" fontWeight="800">
             Next.
@@ -37,7 +31,7 @@ export default function Home() {
           <Box as="code" fontWeight="600">
             pages/index.js
           </Box>{' '}
-          and save to reload.
+          and save to reload.s
         </Text>
       </Flex>
     </>

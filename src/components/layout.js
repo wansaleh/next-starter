@@ -1,5 +1,5 @@
 import { useColorMode } from '@chakra-ui/react';
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 
 export default function Layout({ children }) {
   const { colorMode } = useColorMode();
@@ -12,5 +12,5 @@ export default function Layout({ children }) {
     }
   }, [colorMode]);
 
-  return <>{children}</>;
+  return children;
 }

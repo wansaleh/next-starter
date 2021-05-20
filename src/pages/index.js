@@ -31,7 +31,7 @@ export default function Home() {
             <Box as="code" fontWeight="600">
               pages/index.js
             </Box>{' '}
-            and save to reload.s
+            and save to reload.
           </Text>
         </Flex>
       </Container>

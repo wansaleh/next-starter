@@ -3,6 +3,8 @@ import { extractCritical } from '@emotion/server';
 import Document, { Head, Html, Main, NextScript } from 'next/document';
 import React from 'react';
 
+import WebFonts from '../styles/webfonts';
+
 function initializeColorMode() {
   if (
     window.localStorage['chakra-ui-color-mode'] === 'dark' ||
@@ -29,6 +31,7 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+          <WebFonts />
           <style
             data-emotion-css={this.props.ids.join(' ')}
             dangerouslySetInnerHTML={{ __html: this.props.css }}

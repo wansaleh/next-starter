@@ -14,7 +14,9 @@ const brandAlt = palette(colors.red[500], {
 });
 
 module.exports = {
-  purge: ['./src/**/*.html', './src/**/*.js'],
+  mode: 'jit',
+  darkMode: 'class',
+  purge: ['./src/**/*.html', './src/**/*.{js,jsx,tsx}'],
   theme: {
     extend: {
       colors: {

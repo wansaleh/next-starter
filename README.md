@@ -1,6 +1,6 @@
 # next-starter
 
-My go-to starter. With Next.js, Chakra-UI, Tailwind.
+My go-to starter. With Next.js, Tailwind, Typescript.
 
 ## Installation & Usage
 

@@ -2,10 +2,15 @@ import NextLink from 'next/link';
 import { useRouter } from 'next/router';
 import React, { Children } from 'react';
 
-export default function ActiveLink({ children, activeClassName = 'active', ...props }) {
+export default function ActiveLink({
+  children,
+  activeClassName = 'active',
+  ...props
+}) {
   const { asPath } = useRouter();
   const child = Children.only(children);
   const childClassName = child.props.className || '';
+  const { href, ...rest } = props;
 
   const className =
     asPath === props.href || asPath === props.as
@@ -13,9 +18,9 @@ export default function ActiveLink({ children, activeClassName = 'active', ...pr
       : childClassName;
 
   return (
-    <NextLink {...props}>
+    <NextLink href={href} {...rest}>
       {React.cloneElement(child, {
-        className: className || null
+        className: className || null,
       })}
     </NextLink>
   );

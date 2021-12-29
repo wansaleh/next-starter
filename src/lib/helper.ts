@@ -8,6 +8,7 @@ type OpenGraphType = {
   templateTitle?: string;
   logo?: string;
 };
+
 export function openGraph({
   siteName,
   templateTitle,

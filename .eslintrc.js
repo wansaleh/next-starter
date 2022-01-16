@@ -17,7 +17,23 @@ module.exports = {
     'no-console': 'warn',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
 
-    // Sort
+    'react/display-name': 'off',
+
+    //#region  //*=========== Unused Import ===========
+    '@typescript-eslint/no-unused-vars': 'off',
+    // 'unused-imports/no-unused-imports': 'warn',
+    // 'unused-imports/no-unused-vars': [
+    //   'warn',
+    //   {
+    //     vars: 'all',
+    //     varsIgnorePattern: '^_',
+    //     args: 'after-used',
+    //     argsIgnorePattern: '^_',
+    //   },
+    // ],
+    //#endregion  //*======== Unused Import ===========
+
+    //#region  //*=========== Import Sort ===========
     'simple-import-sort/exports': 'warn',
     'simple-import-sort/imports': [
       'warn',
@@ -32,7 +48,9 @@ module.exports = {
           // static data
           ['^@/data'],
           // components
-          ['^@/components'],
+          ['^@/components', '^@/container'],
+          // zustand store
+          ['^@/store'],
           // Other imports
           ['^@/'],
           // relative paths up until 3 level
@@ -52,6 +70,7 @@ module.exports = {
         ],
       },
     ],
+    //#endregion  //*======== Import Sort ===========
   },
   globals: {
     React: true,

@@ -1,10 +1,10 @@
+import Meta from '@/components/meta';
 import Nav from '@/components/nav';
-import Seo from '@/components/seo';
 
 export default function Home() {
   return (
     <>
-      <Seo templateTitle="Home" />
+      <Meta />
 
       <Nav />
 

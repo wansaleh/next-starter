@@ -12,6 +12,7 @@
     "tsc": "tsc"
   },
   "dependencies": {
+    "@vercel/og": "^0.0.27",
     "next": "^13.1.6",
     "next-themes": "^0.2.1",
     "react": "^18.2.0",

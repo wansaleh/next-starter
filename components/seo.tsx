@@ -4,10 +4,10 @@ import { useRouter } from 'next/router';
 import { openGraph } from '@/lib/helper';
 
 const defaultMeta = {
-  title: 'By Wan Saleh',
-  siteName: 'By Wan Saleh',
+  title: 'Next Starter',
+  siteName: 'Next Starter',
   description:
-    'Producer, composer, mixer and mastering engineer. Coder at night.',
+    'Starting point for a Next.js site. Includes TypeScript, Tailwind CSS, ESLint, Prettier, and more.',
   url: 'https://wansaleh.com',
   image: 'https://wansaleh.com/favicon/large-og.jpg',
   type: 'website',

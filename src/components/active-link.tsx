@@ -1,6 +1,6 @@
+import React, { Children } from 'react';
 import NextLink from 'next/link';
 import { useRouter } from 'next/router';
-import React, { Children } from 'react';
 
 export default function ActiveLink({
   children,

@@ -1,5 +1,5 @@
-import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
+import { useTheme } from 'next-themes';
 
 const themes = {
   light: {
@@ -36,7 +36,7 @@ export default function ThemeSelect() {
     <>
       <button
         type="button"
-        className="flex font-semibold gap-1 h-8 items-center justify-center px-1 py-0 transition w-8 hover:text-brand"
+        className="hover:text-brand flex h-8 w-8 items-center justify-center gap-1 px-1 py-0 font-semibold transition"
         onClick={toggle}
         title={themes[theme].label}
       >

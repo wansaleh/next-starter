@@ -2,23 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  @apply font-sans;
-  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
-}
-
-h1 {
-  @apply lg:text-6xl text-4xl;
-}
-h2 {
-  @apply lg:text-5xl text-3xl;
-}
-h3 {
-  @apply lg:text-4xl text-2xl;
-}
-
 @layer base {
-  .layout {
-    @apply px-6 mx-auto max-w-6xl;
+  html {
+    @apply antialiased;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  }
+
+  h1 {
+    @apply text-4xl lg:text-6xl;
+  }
+  h2 {
+    @apply text-3xl lg:text-5xl;
+  }
+  h3 {
+    @apply text-2xl lg:text-4xl;
   }
 }

@@ -1,5 +1,5 @@
-import Nav from '@/components/nav';
-import Seo from '@/components/seo';
+import Nav from '@/../components/nav';
+import Seo from '@/../components/seo';
 
 export default function Home() {
   return (
